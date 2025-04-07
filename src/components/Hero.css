@@ -1,0 +1,198 @@
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
+    background: #222;
+    transition: 0.3s ease-in-out;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 1100;  /* Ensures it stays above hero images */
+}
+
+.hero {
+    position: relative;
+    z-index: 1;  /* Keeps hero section below the sidebar */
+}
+
+/* Slider */
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* Overlay Effect */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+}
+
+/* Hero Text Content */
+.hero-content {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    color: white;
+    z-index: 2;
+    max-width: 600px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: #00bcd4;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero-description {
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    color: #eee;
+}
+
+/* Slider Text */
+.slide-text {
+    position: absolute;
+    text-align: center;
+    width: 800px;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #00bcd4;
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide.active .slide-text {
+    transform: translateX(-50%) translateY(-10px);
+}
+
+/* Slider Dots */
+.slider-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot.active {
+    background: #00bcd4;
+    transform: scale(1.3);
+}
+
+/* Keyframe Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-description {
+        font-size: 1.2rem;
+    }
+    .slide-text {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        top: 50px;
+        left: 50px;
+        max-width: 400px;
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-description {
+        font-size: 1rem;
+    }
+    .slide-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .hero-title {
+        font-size: 45px;
+    }
+    .hero-description {
+        font-size: 23px;
+    }
+    .slide-text {
+        font-size: 38px;
+        width: 500px;
+    }
+}
+
+@media (max-width: 500px)
+{
+    .hero-title {
+        font-size: 45px;
+    }
+    .hero-description {
+        font-size: 23px;
+    }
+    .slide-text {
+        font-size: 38px;
+        width: 500px;
+    }
+}

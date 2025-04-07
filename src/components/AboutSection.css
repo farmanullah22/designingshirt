@@ -1,0 +1,154 @@
+.about-hero {
+    background-image: url('public/images/shirt-hero3.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .about-section {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdfdfd;
+  }
+
+  .about-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .about-text {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 2rem;
+  }
+
+  .about-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+
+  .about-card {
+    flex: 1 1 300px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .about-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .about-card li {
+    margin: 8px 0;
+  }
+
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 3rem 0;
+  }
+
+  .stats h4 {
+    font-size: 2rem;
+    color: #e63946;
+  }
+
+  .team-section {
+    margin-top: 4rem;
+  }
+
+  .team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+  .team-member {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 250px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .team-member img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .testimonials {
+    margin-top: 4rem;
+  }
+
+  .testimonial-card {
+    background: #fafafa;
+    border-left: 5px solid #e63946;
+    margin: 10px auto;
+    padding: 15px;
+    max-width: 600px;
+    border-radius: 8px;
+  }
+
+  .testimonial-card span {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .contact-section {
+    margin-top: 3rem;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .contact-section a {
+    color: #e63946;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .about-grid,
+    .team-grid,
+    .stats {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-size: 2.2rem;
+    }
+
+    .about-card,
+    .team-member {
+      width: 90%;
+    }
+      .hero-content h1 {
+      margin-top: 250px;
+      margin-left: 20px;
+}
+  }

@@ -1,0 +1,176 @@
+/* General Navbar Styles */
+.navbar {
+    background: #333;
+    padding: 15px 20px;
+    color: white;
+    /* position: fixed; */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Logo and Toggle Wrapper */
+.logo-toggle-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo */
+.navbar-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 100px;
+}
+
+.navbar-logo img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo-heading {
+    color: #00bcd4;
+    /* margin: 0; */
+    font-size: 1.5rem;
+}
+
+.logo-text {
+    color: #00bcd4;
+    font-size: 2.5rem;
+}
+
+.logo-text2 {
+    font-size: 2.3rem;
+    color: #00bcd4;
+}
+
+/* Desktop Navigation */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    margin-right: 100px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #00bcd4;
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 20px; /* Ensures spacing from logo */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
+    background: #222;
+    transition: 0.3s ease-in-out;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-links li {
+    margin: 20px 0;
+}
+
+.sidebar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: block;
+    transition: 0.3s ease-in-out;
+}
+
+.sidebar-links a:hover {
+    color: #00bcd4;
+}
+
+/* Prevent page from moving left and right */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Responsive Design */
+
+@media (max-width: 800px) {
+  .nav-links {
+    margin-right: 50px;
+  }
+  .logo-heading {
+    margin-left: -80px;
+  }
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .sidebar {
+        width: 60%;
+    }
+
+    .logo-toggle-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .menu-icon {
+        margin-right: 25px;
+    }
+    
+}
